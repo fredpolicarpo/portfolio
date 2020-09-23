@@ -11,7 +11,18 @@ Here I list some principles that I follow to write software solutions
  - [Enterprise Integration Patterns](https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns)
  
 # The problem
-//TODO
+Create a digital wallet to provide simple digital bank features
+ - Deposit with billet
+ - Deposit with bank transfer (TED in)
+ - Transfer money to another bank account (TED out)
+ - Transfer money to another wallet (P2P)
+ - Pay billets with balance
+ - Schedule billet payments
+ - Show bank statement
+ - Show balance
+ - Adding contacts to make tansfer easier
+ 
+The features will be relased gradually to validate the disign/architectural decisions by measuring the effort to add new features.
 
 # Requirements
  - The Digital Wallet must use a third party software baas(bank as a service)
