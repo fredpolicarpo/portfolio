@@ -21,8 +21,12 @@ Create a digital wallet to provide simple digital bank features
  - Show bank statement
  - Show balance
  - Adding contacts to make tansfer easier
- 
-The features will be relased gradually to validate the disign/architectural decisions by measuring the effort to add new features.
+
+**IMPORTANT:**
+
+The features will be relased gradually to validate the disign/architectural decisions by measuring the effort to add and evolve features.
+
+The list above never will be completly developed, it must be increased as it is delivered, because it is necessary to have a long term vision of the product to verify that the software decisions are correct, and that the software life cycle keeps agile and sustainable with a good lead time.
 
 # Requirements
  - The Digital Wallet must use a third party software baas(bank as a service)
