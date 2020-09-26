@@ -44,11 +44,11 @@ The list above never will be completly developed, it must be increased as it is 
 
 # The solutions
 Here a list the solutions that I intend to develop to solve the problem
- - Monolith
+ - [Monolith](monolith/README.md)
    - NodeJS/TS
    - SpringBoot/Kotlin 
-   - Micronout/Kotlin
+   - Micronaut/Kotlin
  - Microservices
    - NodeJS/TS
    - SpringBoot/Kotlin 
-   - Micronout/Kotlin
+   - Micronaut/Kotlin
