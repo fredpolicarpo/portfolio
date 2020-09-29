@@ -1,10 +1,11 @@
-import { DepositSlip } from "./types"
-import moment from 'moment'
+import { DepositSlip, SlipGenerator, SlipGeneratorProvider, InvalidAmountError } from "./types"
 
-export async function generateSlip(amount: number): Promise<DepositSlip> {
-    return  {
-        amount: 20,
-        dueDate: moment(new Date()).add(3, 'days').toDate(),
-        codeBar: "                                                "
+export const buildSlipGenerator = (provider: SlipGeneratorProvider): SlipGenerator => {
+    return async (amount: number): Promise<DepositSlip> => {
+        if (amount < 20) {
+            throw new InvalidAmountError(amount)
+        }
+
+        return provider(amount)
     }
 }
