@@ -11,6 +11,7 @@ The [monolith](https://microservices.io/patterns/monolithic.html) solution will 
     - [Spock Framework](http://spockframework.org/)
     - [ArchUnit](https://www.archunit.org)
 
+ - [Resilience 4J](https://github.com/resilience4j/resilience4j)
 
 
 ## NodeJS World
