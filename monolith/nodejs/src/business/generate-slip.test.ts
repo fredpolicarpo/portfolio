@@ -1,3 +1,5 @@
+/* tslint:disable no-unused-expression */
+
 import * as chai from 'chai'
 import { expect } from 'chai'
 import chaiAsPromissed from 'chai-as-promised'
@@ -6,7 +8,7 @@ import { DepositSlip, SlipGenerator, InvalidAmountError } from './types'
 import { buildSlipGenerator } from './generate-slip'
 import { stub } from 'sinon'
 
-chai.use(chaiAsPromissed);
+chai.use(chaiAsPromissed)
 
 describe('Deposit by slip', async () => {
     let slipGenerator: SlipGenerator
@@ -16,7 +18,7 @@ describe('Deposit by slip', async () => {
         const expectedSlip = {
             amount: 20,
             dueDate: moment().add(3, 'days').toDate(),
-            barCode: "23793381286004050992321000063301683940000002000"
+            barCode: '23793381286004050992321000063301683940000002000'
         }
 
         stubProvider.withArgs(20).returns(expectedSlip)
@@ -43,27 +45,6 @@ describe('Deposit by slip', async () => {
         const stubProvider = stub()
         slipGenerator = buildSlipGenerator(stubProvider)
 
-        await expect(slipGenerator(19.99)).to.be.rejectedWith(InvalidAmountError, "The minimum amount allowed is 20, but given 19.99")
+        await expect(slipGenerator(19.99)).to.be.rejectedWith(InvalidAmountError,  'The minimum amount allowed is 20, but given 19.99')
     })
-
-    /*
-        it('should create two distinct slips', async () => {
-            const slip1: DepositSlip = await slipGenerator(22)
-            const slip2: DepositSlip = await slipGenerator(32)
-    
-            assert.isNotNull(slip1)
-            assert.equal(slip1.amount, 22)
-            assert.equal(moment(slip1.dueDate).format('yyyy-MM-dd'), moment().add(3, 'days').format('yyyy-MM-dd'))
-            assert.isNotEmpty(slip1.barCode)
-            assert.equal(slip1.barCode.length, 48)
-    
-            assert.isNotNull(slip2)
-            assert.equal(slip2.amount, 32)
-            assert.equal(moment(slip2.dueDate).format('yyyy-MM-dd'), moment().add(3, 'days').format('yyyy-MM-dd'))
-            assert.isNotEmpty(slip2.barCode)
-            assert.equal(slip2.barCode.length, 48)
-    
-            assert.notEqual(slip1.barCode, slip2.barCode)
-        })
-        */
 })
