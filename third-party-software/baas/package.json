@@ -1,0 +1,16 @@
+{
+  "name": "some-bank-as-a-service",
+  "version": "1.0.0",
+  "description": "Some Bank as a Service",
+  "main": "index.js",
+  "repository": "https://github.com/fredpolicarpo/portfolio",
+  "author": "Fred Policarpo",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "moment": "^2.29.0"
+  }
+}
