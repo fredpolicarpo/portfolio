@@ -1,4 +1,4 @@
-import { Context } from '../services/context'
+import { Context } from '../ports/context'
 
 import { requestSlip } from '../ui/ports/input'
 import { SlipRequest, SlipResponse } from '../ui/models'

@@ -1,7 +1,7 @@
 import { requestSlip } from '../ports/input'
 import { SlipRequest } from '../models'
 
-import { Context } from '../../services/context'
+import { Context } from '../../ports/context'
 
 import { buildCreateNewSlip } from '../../business/interactor'
 

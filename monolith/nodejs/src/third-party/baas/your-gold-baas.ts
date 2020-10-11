@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { DepositSlip } from '../../business/core/types'
-import { SlipGeneratorProvider } from '../../services/baas'
+import { SlipGeneratorProvider } from '../../ports/baas'
 import config from '../../application/config'
 
 const baseUrl = config.getYourGoldBaaSUrl()

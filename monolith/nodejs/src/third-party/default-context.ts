@@ -1,4 +1,4 @@
-import { Context } from '../services/context'
+import { Context } from '../ports/context'
 import { generateSlip } from './baas/your-gold-baas'
 
 const context: Context = {
