@@ -22,3 +22,5 @@ The misbehaviors should be set up by the following environment variables.
 The bank as a service third-party should offer the following services:
  - Generate slip for deposit
     - Costs $0.50 each one
+
+This project should create more then one BaaS to test if the business logic is decoupled from the provider.

@@ -1,14 +1,10 @@
 export interface DepositSlip {
-    amount: number,
-    dueDate: Date,
-    barCode: string,
+    readonly amount: number,
+    readonly dueDate: Date,
+    readonly barCode: string,
 }
 
-export type SlipGeneratorProvider = (amount: number) => Promise<any>
-
 export type SlipGenerator = (amount: number) => Promise<DepositSlip>
-
-export type SlipGeneratorBuilder = (provider: SlipGeneratorProvider) => SlipGenerator
 
 export class InvalidAmountError extends Error {
     constructor(amount: number) {

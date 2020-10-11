@@ -1,7 +1,7 @@
 {
-  "name": "some-bank-as-a-service",
+  "name": "your-gold-baas",
   "version": "1.0.0",
-  "description": "Some Bank as a Service",
+  "description": "Your gold - Bank as a Service",
   "main": "index.js",
   "repository": "https://github.com/fredpolicarpo/portfolio",
   "author": "Fred Policarpo",

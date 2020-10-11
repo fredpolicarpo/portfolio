@@ -4,7 +4,7 @@ import * as chai from 'chai'
 import { expect } from 'chai'
 import chaiAsPromissed from 'chai-as-promised'
 import moment from 'moment'
-import { DepositSlip, SlipGenerator, InvalidAmountError } from './types'
+import { DepositSlip, InvalidAmountError, SlipGenerator } from './core/types'
 import { buildSlipGenerator } from './generate-slip'
 import { stub } from 'sinon'
 
@@ -45,6 +45,6 @@ describe('Deposit by slip', async () => {
         const stubProvider = stub()
         slipGenerator = buildSlipGenerator(stubProvider)
 
-        await expect(slipGenerator(19.99)).to.be.rejectedWith(InvalidAmountError,  'The minimum amount allowed is 20, but given 19.99')
+        await expect(slipGenerator(19.99)).to.be.rejectedWith(InvalidAmountError, 'The minimum amount allowed is 20, but given 19.99')
     })
 })

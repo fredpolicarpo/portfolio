@@ -1,5 +1,6 @@
-import { DepositSlip, SlipGenerator, SlipGeneratorProvider, InvalidAmountError } from './types'
+import { DepositSlip, InvalidAmountError, SlipGenerator } from './core/types'
 import canGenerateSlip from './core/can-generate-slip'
+import { SlipGeneratorProvider } from '../services/baas'
 
 export const buildSlipGenerator = (provider: SlipGeneratorProvider): SlipGenerator => {
     return async (amount: number): Promise<DepositSlip> => {
