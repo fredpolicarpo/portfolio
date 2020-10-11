@@ -1,4 +1,4 @@
-import { Context as ServiceContext } from '../services/context'
+import { Context as ServiceContext } from '../ports/context'
 import defaultContext from '../third-party/default-context'
 
 export const getServiceContext = (): ServiceContext => {
