@@ -7,7 +7,10 @@ export interface DepositSlip {
 export type SlipGenerator = (amount: number) => Promise<DepositSlip>
 
 export class InvalidAmountError extends Error {
+    readonly amount: number
+    
     constructor(amount: number) {
         super(`The minimum amount allowed is 20, but given ${amount}`)
+        this.amount = amount
     }
 }
