@@ -21,6 +21,7 @@ function formatMoney(value: number): string {
     return `R$ ${value.toFixed(2).replace('.', ',')}`
 }
 
+ /* tslint:disable no-console */
 export function buildShowError(resp: Response): showError {
     return (error: Error): void => {
         if (error instanceof InvalidAmountError) {
@@ -35,3 +36,4 @@ export function buildShowError(resp: Response): showError {
         }
     }
 }
+ /* tslint:enabled no-console */

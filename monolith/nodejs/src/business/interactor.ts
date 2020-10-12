@@ -19,4 +19,4 @@ export function buildCreateNewSlip(context: Context): Promise<requestSlip> {
             barCode: slip.barCode,
         }
     })
-} 
+}

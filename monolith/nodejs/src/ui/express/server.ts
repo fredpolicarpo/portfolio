@@ -25,12 +25,12 @@ app.post('/slip/:amount', async (req, res) => {
     }
 
     const request: requestSlip = buildRequestSlip(serviceContext)
-    const showSlip: showSlip = buildShowSlip(res)
-    const showError: showError = buildShowError(res)
+    const showSlipFunc: showSlip = buildShowSlip(res)
+    const showErrorFunc: showError = buildShowError(res)
 
     request(slipReq)
-        .then(slipResp => showSlip(slipResp))
-        .catch(error =>showError(error))
+        .then(slipResp => showSlipFunc(slipResp))
+        .catch(error => showErrorFunc(error))
 })
 
 app.listen(port, () =>

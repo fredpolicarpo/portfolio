@@ -48,8 +48,8 @@ describe('Presenter', async () => {
         const show: showSlip = buildShowSlip(response)
 
         const slip: SlipResponse = {
-            barCode: "some bar code",
-            amount: "20.00",
+            barCode: 'some bar code',
+            amount: '20.00',
             dueDate: moment().format('')
         }
 

@@ -17,17 +17,17 @@ describe('Interactor', async () => {
             dueDate: moment().add(3, 'days').toDate(),
             barCode: '23793381286004050992321000063301683940000002000'
         }
-        
+
         const stubContext: Context = {
             slipGeneratorProvider: (amount: number) => (Promise.resolve(expectedSlip))
         }
 
         requestSlipFunc = await buildCreateNewSlip(stubContext)
 
-        const result: SlipResponse = await requestSlipFunc({ amount: "20" })
+        const result: SlipResponse = await requestSlipFunc({ amount: '20' })
 
         expect(result.barCode).to.be.equal(expectedSlip.barCode)
-        expect(result.amount).to.be.equal("20.00")
+        expect(result.amount).to.be.equal('20.00')
         expect(result.dueDate).to.be.equal(moment(expectedSlip.dueDate).format(''))
     })
 })
